@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>powerline_inspection_simulation</name>
+  <version>0.0.0</version>
+  <description>Autonomous inspection drone simulation using ROS 2 Jazzy, Gazebo Harmonic, and PX4. Features custom catenary wire worlds, X500 sensor setup, and complete launch configuration for ROS 2/Gazebo bridging and visualization.</description>
+  <maintainer email="leticia.pinto@lactec.com.br">leticia</maintainer>
+  <license>Apache License</license>
+
+  <depend>rclpy</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
