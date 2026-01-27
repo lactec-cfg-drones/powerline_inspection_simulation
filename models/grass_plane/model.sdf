@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<sdf version="1.8">
+  <model name="grass_plane">
+    <static>true</static>
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>50 50</size>
+          </plane>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>100 150</size>
+          </plane>
+        </geometry>
+        <material>
+          <ambient>0.8 0.8 0.8 1</ambient>
+          <diffuse>1.0 1.0 1.0 1</diffuse>
+          <pbr>
+            <metal>
+              <albedo_map>model://grass_plane/meshes/grass_seamless.jpg</albedo_map>
+              <roughness>0.9</roughness>
+            </metal>
+          </pbr>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
