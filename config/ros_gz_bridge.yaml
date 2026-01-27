@@ -1,0 +1,167 @@
+---
+- ros_topic_name: "/clock"
+  gz_topic_name: "/clock"
+  ros_type_name: "rosgraph_msgs/msg/Clock"
+  gz_type_name: "gz.msgs.Clock"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/tf"
+  gz_topic_name: "/model/CTU_CRAS_NORLAB_X500_SENSOR_CONFIG_1_0/pose"
+  ros_type_name: "tf2_msgs/msg/TFMessage"
+  gz_type_name: "gz.msgs.Pose_V"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/odom"
+  gz_topic_name: "/model/CTU_CRAS_NORLAB_X500_SENSOR_CONFIG_1_0/odometry_with_covariance"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  gz_type_name: "gz.msgs.OdometryWithCovariance"
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/camera_front/camera_info"
+  gz_topic_name: "/world/inspection_valley/model/CTU_CRAS_NORLAB_X500_SENSOR_CONFIG_1_0/link/base_link/sensor/camera_front/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "gz.msgs.CameraInfo"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/camera_front/image"
+  gz_topic_name: "/world/inspection_valley/model/CTU_CRAS_NORLAB_X500_SENSOR_CONFIG_1_0/link/base_link/sensor/camera_front/image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/front_laser/scan"
+  gz_topic_name: "/world/inspection_valley/model/CTU_CRAS_NORLAB_X500_SENSOR_CONFIG_1_0/link/front_laser_link/sensor/front_laser/scan"
+  ros_type_name: "sensor_msgs/msg/LaserScan"
+  lazy: true
+  gz_type_name: "gz.msgs.LaserScan"
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/front_laser/point_cloud"
+  gz_topic_name: "/world/inspection_valley/model/CTU_CRAS_NORLAB_X500_SENSOR_CONFIG_1_0/link/front_laser_link/sensor/front_laser/scan/points"
+  ros_type_name: "sensor_msgs/msg/PointCloud2"
+  lazy: true
+  gz_type_name: "gz.msgs.PointCloudPacked"
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/imu"
+  gz_topic_name: "/world/inspection_valley/model/CTU_CRAS_NORLAB_X500_SENSOR_CONFIG_1_0/link/base_link/sensor/imu_sensor/imu"
+  ros_type_name: "sensor_msgs/msg/Imu"
+  gz_type_name: "gz.msgs.IMU"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/magnetometer"
+  gz_topic_name: "/world/inspection_valley/model/CTU_CRAS_NORLAB_X500_SENSOR_CONFIG_1_0/link/base_link/sensor/magnetometer_sensor/magnetometer"
+  ros_type_name: "sensor_msgs/msg/MagneticField"
+  gz_type_name: "gz.msgs.Magnetometer"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/navsat"
+  gz_topic_name: "/world/inspection_valley/model/CTU_CRAS_NORLAB_X500_SENSOR_CONFIG_1_0/link/base_link/sensor/navsat_sensor/navsat"
+  ros_type_name: "sensor_msgs/msg/NavSatFix"
+  gz_type_name: "gz.msgs.NavSat"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/rs_down/camera_info"
+  gz_topic_name: "/world/inspection_valley/model/CTU_CRAS_NORLAB_X500_SENSOR_CONFIG_1_0/link/base_link/sensor/rs_down/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "gz.msgs.CameraInfo"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/rs_down/depth_image"
+  gz_topic_name: "/world/inspection_valley/model/CTU_CRAS_NORLAB_X500_SENSOR_CONFIG_1_0/link/base_link/sensor/rs_down/depth_image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/rs_down/image"
+  gz_topic_name: "/world/inspection_valley/model/CTU_CRAS_NORLAB_X500_SENSOR_CONFIG_1_0/link/base_link/sensor/rs_down/image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/rs_down/point_cloud"
+  gz_topic_name: "/world/inspection_valley/model/CTU_CRAS_NORLAB_X500_SENSOR_CONFIG_1_0/link/base_link/sensor/rs_down/points"
+  ros_type_name: "sensor_msgs/msg/PointCloud2"
+  lazy: true
+  gz_type_name: "gz.msgs.PointCloudPacked"
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/rs_up/camera_info"
+  gz_topic_name: "/world/inspection_valley/model/CTU_CRAS_NORLAB_X500_SENSOR_CONFIG_1_0/link/base_link/sensor/rs_up/camera_info"
+  ros_type_name: "sensor_msgs/msg/CameraInfo"
+  gz_type_name: "gz.msgs.CameraInfo"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/rs_up/depth_image"
+  gz_topic_name: "/world/inspection_valley/model/CTU_CRAS_NORLAB_X500_SENSOR_CONFIG_1_0/link/base_link/sensor/rs_up/depth_image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/rs_up/image"
+  gz_topic_name: "/world/inspection_valley/model/CTU_CRAS_NORLAB_X500_SENSOR_CONFIG_1_0/link/base_link/sensor/rs_up/image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/rs_up/point_cloud"
+  gz_topic_name: "/world/inspection_valley/model/CTU_CRAS_NORLAB_X500_SENSOR_CONFIG_1_0/link/base_link/sensor/rs_up/points"
+  ros_type_name: "sensor_msgs/msg/PointCloud2"
+  lazy: true
+  gz_type_name: "gz.msgs.PointCloudPacked"
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/motor_speed"
+  gz_topic_name: "/CTU_CRAS_NORLAB_X500_SENSOR_CONFIG_1_0/command/motor_speed"
+  ros_type_name: "actuator_msgs/msg/Actuators"
+  gz_type_name: "gz.msgs.Actuators"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/air_pressure"
+  gz_topic_name: "/world/inspection_valley/model/CTU_CRAS_NORLAB_X500_SENSOR_CONFIG_1_0/link/base_link/sensor/air_pressure_sensor/air_pressure"
+  ros_type_name: "sensor_msgs/msg/FluidPressure"
+  gz_type_name: "gz.msgs.FluidPressure"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/camera_imu"
+  gz_topic_name: "/world/inspection_valley/model/CTU_CRAS_NORLAB_X500_SENSOR_CONFIG_1_0/link/camera_link/sensor/camera_imu/imu"
+  ros_type_name: "sensor_msgs/msg/Imu"
+  gz_type_name: "gz.msgs.IMU"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/lidar_2d/scan"
+  gz_topic_name: "/world/inspection_valley/model/CTU_CRAS_NORLAB_X500_SENSOR_CONFIG_1_0/link/link/sensor/lidar_2d_v2/scan"
+  ros_type_name: "sensor_msgs/msg/LaserScan"
+  lazy: true
+  gz_type_name: "gz.msgs.LaserScan"
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/joint_states"
+  gz_topic_name: "/world/inspection_valley/model/CTU_CRAS_NORLAB_X500_SENSOR_CONFIG_1_0/joint_state"
+  ros_type_name: "sensor_msgs/msg/JointState"
+  gz_type_name: "gz.msgs.Model"
+  lazy: true
+  direction: GZ_TO_ROS
+
+- ros_topic_name: "/tf"
+  gz_topic_name: "/model/CTU_CRAS_NORLAB_X500_SENSOR_CONFIG_1_0/pose"
+  ros_type_name: "tf2_msgs/msg/TFMessage"
+  gz_type_name: "gz.msgs.Pose_V"
+  lazy: true
+  direction: GZ_TO_ROS
