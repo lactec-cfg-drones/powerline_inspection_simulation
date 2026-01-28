@@ -188,7 +188,7 @@ ROS 2 bridge and visualization
 ```bash 
 # Source the environment 
 pyenv activate px4 
-source /opt/ros/jazzy/setup.zsh 
+source /opt/ros/jazzy/setup.bash 
 source ~/drone_sim_ws/install/setup.bash
 
 # Run the bridge 
