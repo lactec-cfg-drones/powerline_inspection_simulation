@@ -148,7 +148,7 @@ source install/setup.bash
 Gazebo environment 
 ```bash 
 # Export Model Paths
-export GZ_SIM_RESOURCE_PATH=$GZ_SIM_RESOURCE_PATH:~/drone_sim_ws/src/powerline_inspection/models:~/drone_sim_ws/src/powerline_inspection/worlds
+export GZ_SIM_RESOURCE_PATH=$GZ_SIM_RESOURCE_PATH:~/drone_sim_ws/src/powerline_inspection_simulation/models:~/drone_sim_ws/src/powerline_inspection_simulation/worlds
 
 # Launch Gazebo
 gz sim -r inspection_valley.world
@@ -175,15 +175,22 @@ export PX4_SIM_MODEL=CTU_CRAS_NORLAB_X500_SENSOR_CONFIG_1
 # Run PX4
 ./build/px4_sitl_default/bin/px4
 ```
+### Terminal 3
+Launch the QGroundControl 
+```bash
+# Assuming that the AppImage is in Download directory
+cd ~/Downloads
+./QGroundControl-x86_64.AppImage
+```
 
-### Terminal 3 
+### Terminal 4 
 ROS 2 bridge and visualization 
 ```bash 
 # Source the environment 
 pyenv activate px4 
-source /opt/ros/jazzy/setup.zsh 
+source /opt/ros/jazzy/setup.bash 
 source ~/drone_sim_ws/install/setup.bash
 
 # Run the bridge 
-ros2 launch powerline_inspection drone_bridge.launch.py
+ros2 launch powerline_inspection_simulation drone_bridge.launch.py
 ```
