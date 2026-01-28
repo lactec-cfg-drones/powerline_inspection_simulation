@@ -175,8 +175,15 @@ export PX4_SIM_MODEL=CTU_CRAS_NORLAB_X500_SENSOR_CONFIG_1
 # Run PX4
 ./build/px4_sitl_default/bin/px4
 ```
+### Terminal 3
+Launch the QGroundControl 
+```bash
+# Assuming that the AppImage is in Download directory
+cd ~/Downloads
+./QGroundControl-x86_64.AppImage
+```
 
-### Terminal 3 
+### Terminal 4 
 ROS 2 bridge and visualization 
 ```bash 
 # Source the environment 
