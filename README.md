@@ -148,7 +148,7 @@ source install/setup.bash
 Gazebo environment 
 ```bash 
 # Export Model Paths
-export GZ_SIM_RESOURCE_PATH=$GZ_SIM_RESOURCE_PATH:~/drone_sim_ws/src/powerline_inspection/models:~/drone_sim_ws/src/powerline_inspection/worlds
+export GZ_SIM_RESOURCE_PATH=$GZ_SIM_RESOURCE_PATH:~/drone_sim_ws/src/powerline_inspection_simulation/models:~/drone_sim_ws/src/powerline_inspection_simulation/worlds
 
 # Launch Gazebo
 gz sim -r inspection_valley.world
@@ -185,5 +185,5 @@ source /opt/ros/jazzy/setup.zsh
 source ~/drone_sim_ws/install/setup.bash
 
 # Run the bridge 
-ros2 launch powerline_inspection drone_bridge.launch.py
+ros2 launch powerline_inspection_simulation drone_bridge.launch.py
 ```
