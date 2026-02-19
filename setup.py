@@ -61,6 +61,7 @@ setup(
     entry_points={
         'console_scripts': [
             'drone_tf_broadcaster = powerline_inspection.odometry_bridge_node:main',
+            'waypoint_cmd_node = powerline_inspection.waypoint_cmd_node:main'
         ],
     },
     options={
