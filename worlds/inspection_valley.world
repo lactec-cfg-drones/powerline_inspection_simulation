@@ -17,6 +17,12 @@
       <ambient>0.4 0.4 0.4 1</ambient>
       <background>0.7 0.7 0.7 1</background>
       <shadows>true</shadows>
+
+      <sky>
+        <clouds>
+          <speed>12</speed>
+        </clouds>
+      </sky>
     </scene>
 
 
@@ -67,10 +73,11 @@
     </include>
 
     <include>
-      <uri>model://three_power_towers</uri>
+      <uri>model://high_voltage_power_line</uri>
       <name>tower_complex</name>
-      <pose>0 0 0 0 0 0</pose>
+      <pose>0 60.0 0.0 0.0 0 0</pose>
     </include>
+
 
     <!-- <include>
       <uri>model://x500_lidar_2d</uri>
@@ -140,7 +147,7 @@
       <pose>-12.53573 -7.64768 0 0 0 0</pose>
     </model>
 
-    <gui fullscreen='0'>
+    <!-- <gui fullscreen='0'>
       <plugin filename="MinimalScene" name="3D View">
         <gz-gui>
           <title>3D View</title>
@@ -198,7 +205,12 @@
           <property type="double" key="y">250</property>
         </gz-gui>
       </plugin>
-    </gui>
+    </gui> -->
+
+
+
+
+
 <!-- 
     <gui fullscreen='0'>
       <plugin filename="gz-sim-image-viewer-system" name="gz::sim::systems::ImageViewer">
