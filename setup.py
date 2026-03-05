@@ -9,7 +9,7 @@ px4_python_path = os.path.join(
 os.path.expanduser('~'), 
 '.pyenv', 
 'versions', 
-'px4', 
+'line_detector', 
 'bin', 
 'python3'
 )
@@ -61,7 +61,8 @@ setup(
     entry_points={
         'console_scripts': [
             'drone_tf_broadcaster = powerline_inspection.odometry_bridge_node:main',
-            'waypoint_cmd_node = powerline_inspection.waypoint_cmd_node:main'
+            'waypoint_cmd_node = powerline_inspection.waypoint_cmd_node:main',
+            'line_detector_node = powerline_inspection.line_detector_node:main', 
         ],
     },
     options={
