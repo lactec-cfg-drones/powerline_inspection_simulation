@@ -63,6 +63,7 @@ setup(
             'drone_tf_broadcaster = powerline_inspection.odometry_bridge_node:main',
             'waypoint_cmd_node = powerline_inspection.waypoint_cmd_node:main',
             'line_detector_node = powerline_inspection.line_detector_node:main', 
+            'yolo_api_node = powerline_inspection.yolo_api_node:main', 
         ],
     },
     options={
