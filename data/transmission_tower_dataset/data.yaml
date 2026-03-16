@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 2
+names: ['insulator', 'transmission tower']
+
+roboflow:
+  workspace: letcias-workspace-2ruoi
+  project: transmission-tower-3umz8-mdu4n
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/letcias-workspace-2ruoi/transmission-tower-3umz8-mdu4n/dataset/1
