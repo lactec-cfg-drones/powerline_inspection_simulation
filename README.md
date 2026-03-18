@@ -92,7 +92,7 @@ Run QGroundControl. Either double-click the AppImage in your file manager or lau
 
 ### Step 4: Install ROS 2 
 
-Follow the installation instructions in the link: [ROS 2 Jazzy installation](https://docs.ros.org/en/jazzy/Installation/Alternatives/Ubuntu-Development-Setup.html)
+Follow the installation instructions in the link: [ROS 2 Jazzy installation](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html)
 
 Install colcon: 
 ```bash 
