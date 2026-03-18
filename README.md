@@ -127,11 +127,10 @@ mkdir -p ~/drone_sim_ws/src
 cd ~/drone_sim_ws/src
 ```
 
-Clone the example repository, px4_msgs, and the simulation repository
+Clone the example repository and px4_msgs
 ```bash
 git clone https://github.com/PX4/px4_msgs.git
 git clone https://github.com/PX4/px4_ros_com.git
-git clone https://github.com/LeticiaRP/powerline_inspection
 ```
 
 Compile the workspace: 
