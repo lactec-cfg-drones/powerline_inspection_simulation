@@ -7,7 +7,7 @@ from launch.substitutions import LaunchConfiguration
 
 def generate_launch_description():
     # Get package directory
-    pkg_dir = get_package_share_directory('powerline_inspection')
+    pkg_dir = get_package_share_directory('powerline_inspection_simulation')
     
     # Define launch arguments
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
