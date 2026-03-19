@@ -8,6 +8,7 @@ from rclpy.node import Node
 from std_msgs.msg import Empty
 from sensor_msgs.msg import PointCloud2
 from vision_msgs.msg import Detection2DArray
+from rclpy.qos import QoSProfile, QoSReliabilityPolicy, QoSDurabilityPolicy, QoSHistoryPolicy
 
 from tf2_ros import TransformException
 from tf2_ros.buffer import Buffer
@@ -40,13 +41,21 @@ class RoiNode(Node):
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self)
 
+        # qos policy
+        sensor_qos_config = QoSProfile(
+            reliability = QoSReliabilityPolicy.BEST_EFFORT, 
+            durability = QoSDurabilityPolicy.VOLATILE, 
+            history = QoSHistoryPolicy.KEEP_LAST,
+            depth = 5,
+        )
+
         # subscribers 
-        self.lidar_sub = self.create_subscription(PointCloud2, '/front_laser/point_cloud', self.lidar_callback, 10)
-        self.yolo_sub = self.create_subscription(Detection2DArray, '/yolo/detections', self.yolo_callback, 10)
+        self.lidar_sub = self.create_subscription(PointCloud2, '/front_laser/point_cloud', self.lidar_callback, sensor_qos_config)
+        self.yolo_sub = self.create_subscription(Detection2DArray, '/yolo/detections', self.yolo_callback, sensor_qos_config)
         self.save_cmd_sub = self.create_subscription(Empty, '/cmd/save_roi', self.save_cmd_callback, 10)
         
         # publishers
-        self.roi_pub = self.create_publisher(PointCloud2, '/perception/point_cloud', 10) 
+        self.roi_pub = self.create_publisher(PointCloud2, '/perception/tower/roi_points', sensor_qos_config) 
 
         # Config para salvar dados
         self.save_requested = False

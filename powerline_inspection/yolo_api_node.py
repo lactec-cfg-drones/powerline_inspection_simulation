@@ -8,6 +8,7 @@ from sensor_msgs.msg import Image, PointCloud2
 from sensor_msgs_py import point_cloud2
 from geometry_msgs.msg import PointStamped
 from vision_msgs.msg import Detection2DArray, Detection2D, ObjectHypothesisWithPose
+from rclpy.qos import QoSProfile, QoSReliabilityPolicy, QoSDurabilityPolicy, QoSHistoryPolicy
 
 import cv2
 from cv_bridge import CvBridge
@@ -27,6 +28,13 @@ class yolo_detection_node(Node):
         self.latest_box = None
         self.latest_image_width = None
 
+        sensor_qos_config = QoSProfile(
+            reliability = QoSReliabilityPolicy.BEST_EFFORT, 
+            durability = QoSDurabilityPolicy.VOLATILE, 
+            history = QoSHistoryPolicy.KEEP_LAST,
+            depth = 5,
+        )
+
 
         # Load YOLO model
         self.get_logger().info('Loading YOLO11 model')
@@ -36,11 +44,11 @@ class yolo_detection_node(Node):
 
 
         # Subscriptions
-        self.image_sub = self.create_subscription(Image, '/camera_front/image', self.image_callback, 10)
+        self.image_sub = self.create_subscription(Image, '/camera_front/image', self.image_callback, sensor_qos_config)
 
 
         # Publishers
-        self.yolo_detection_pub = self.create_publisher(Detection2DArray, '/yolo/detections', 10)
+        self.yolo_detection_pub = self.create_publisher(Detection2DArray, '/yolo/detections', sensor_qos_config)
         self.detection_array = Detection2DArray()
         self.detection = Detection2D()
         self.hypothesis = ObjectHypothesisWithPose()
