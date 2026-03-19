@@ -92,7 +92,7 @@ Run QGroundControl. Either double-click the AppImage in your file manager or lau
 
 ### Step 4: Install ROS 2 
 
-Follow the installation instructions in the link: [ROS 2 Jazzy installation](https://docs.ros.org/en/jazzy/Installation/Alternatives/Ubuntu-Development-Setup.html)
+Follow the installation instructions in the link: [ROS 2 Jazzy installation](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html)
 
 Install colcon: 
 ```bash 
@@ -127,11 +127,10 @@ mkdir -p ~/drone_sim_ws/src
 cd ~/drone_sim_ws/src
 ```
 
-Clone the example repository, px4_msgs, and the simulation repository
+Clone the example repository and px4_msgs
 ```bash
 git clone https://github.com/PX4/px4_msgs.git
 git clone https://github.com/PX4/px4_ros_com.git
-git clone https://github.com/LeticiaRP/powerline_inspection
 ```
 
 Compile the workspace: 
